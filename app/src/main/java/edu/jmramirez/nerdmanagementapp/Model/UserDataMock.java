@@ -1,4 +1,4 @@
-package edu.jmramirez.nerdmanagementapp;
+package edu.jmramirez.nerdmanagementapp.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,42 +78,42 @@ public class UserDataMock {
 				new CourseData(
 						"CS 100. Computational Thinking I",
 						6,
-						"Mon,Tue,Wed,Thu,Fri",
+						"Mon, Tue, Wed, Thu, Fri",
 						"10:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 101. Fluency With Information Technology",
 						3,
-						"Mon,Wed,Thu,Fri",
+						"Mon, Wed, Thu, Fri",
 						"12:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 109. Smart Phone and Wireless Technology",
 						3,
-						"Mon,Thu,Fri",
+						"Mon, Thu, Fri",
 						"15:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 199. Special Topcs: Outreach Training",
 						6,
-						"Mon,Tue,Wed,Thu",
+						"Mon, Tue, Wed, Thu",
 						"09:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 200. Computational Thinking II",
 						6,
-						"Mon,Wed,Fri",
+						"Mon, Wed, Fri",
 						"17:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 201. Introduction to Object Oriented Programming",
 						9,
-						"Tue,Thu",
+						"Tue, Thu",
 						"14:00")
 				);
 		courseDataMockList.add(
@@ -134,28 +134,28 @@ public class UserDataMock {
 				new CourseData(
 						"CS 303. Algorithms/Data Structures",
 						6,
-						"Mon,Thu,Fri",
+						"Mon, Thu, Fri",
 						"08:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 304. Object-Oriented Programming in C++",
 						4,
-						"Tue,Wed,Fri",
+						"Tue, Wed, Fri",
 						"10:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 305. Introduction to Python Programming",
 						3,
-						"Mon,Thu",
+						"Mon, Thu",
 						"17:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 330. Computer Organization and Assembly Language Programming",
 						3,
-						"Tue,Fri",
+						"Tue, Fri",
 						"14:00")
 				);
 		courseDataMockList.add(
@@ -169,14 +169,14 @@ public class UserDataMock {
 				new CourseData(
 						"CS 334. Internetworking with TCP/IP",
 						6,
-						"Mon,Thu,Fri",
+						"Mon, Thu, Fri",
 						"16:00")
 				);
 		courseDataMockList.add(
 				new CourseData(
 						"CS 336. Network Security",
 						6,
-						"Tue,Wed,Fri",
+						"Tue, Wed, Fri",
 						"18:00")
 				);
 		
@@ -190,71 +190,71 @@ public class UserDataMock {
 		
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Homer Simpson", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.fry),
+						"Philip J. Fry",
 						"1", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Marge Simpson", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.leela),
+						"Turanga Leela",
 						"2", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Bart Simpson", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.bender),
+						"Bender Bending Rodriguez",
 						"3", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Lisa Simpson", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.amy),
+						"Amy Wong",
 						"4", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Maggie Simpson", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.mom),
+						"Mom",
 						"5", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Aristotle Amadopolis", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.farn),
+						"Professor Hubert J. Farnsworth",
 						"6", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Wendell Borton", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.zoidberg),
+						"Doctor John Zoidberg",
 						"7", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Jimbo Jones", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.nibbler),
+						"Lord Nibbler",
 						"8", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Kearney Zzyzwicz", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.zapp),
+						"Zapp Brannigan",
 						"9", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);
 		userDataMockList.add(
 				new UserData(
-						BitmapFactory.decodeResource(context.getResources(), R.mipmap.profile_placeholder),
-						"Cookie Kwan", 
+						BitmapFactory.decodeResource(context.getResources(), R.mipmap.kif),
+						"Kif Kroker",
 						"10", 
 						courseDataMockList.subList(0, randomGenerator.nextInt(MAX_RAND_NUM)))
 				);

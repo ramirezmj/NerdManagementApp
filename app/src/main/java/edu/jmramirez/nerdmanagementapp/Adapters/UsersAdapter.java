@@ -1,4 +1,4 @@
-package edu.jmramirez.nerdmanagementapp;
+package edu.jmramirez.nerdmanagementapp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,27 +11,30 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoursesAdapter extends BaseAdapter {
+import edu.jmramirez.nerdmanagementapp.Model.UserDataMock;
+import edu.jmramirez.nerdmanagementapp.R;
+
+public class UsersAdapter extends BaseAdapter {
 
     Context mContext;
-    ArrayList <UserDataMock.UserData> mCoursesList = new ArrayList<>();
+    List<UserDataMock.UserData> mUsersList = new ArrayList<>();
 
-    public CoursesAdapter() {
+    public UsersAdapter() {
     }
 
-    public CoursesAdapter (Context context, List<UserDataMock.UserData> coursesList) {
+    public UsersAdapter (Context context, List<UserDataMock.UserData> usersList) {
         this.mContext = context;
-        this.mCoursesList = (ArrayList<UserDataMock.UserData>) coursesList;
+        this.mUsersList = usersList;
     }
 
     @Override
     public int getCount() {
-        return this.mCoursesList.size();
+        return this.mUsersList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.mCoursesList.get(position);
+        return this.mUsersList.get(position);
     }
 
     @Override
@@ -48,16 +51,18 @@ public class CoursesAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) this.mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            elementView = inflater.inflate(R.layout.list_item, parent, false);
+            elementView = inflater.inflate(R.layout.list_user, parent, false);
         }
 
 
         ImageView courseIV = (ImageView) elementView.findViewById(R.id.courseIV);
-        courseIV.setImageBitmap(this.mCoursesList.get(position).getPicture());
+        courseIV.setImageBitmap(this.mUsersList.get(position).getPicture());
+
         TextView courseNameTV = (TextView) elementView.findViewById(R.id.courseNameTV);
-        courseNameTV.setText(this.mCoursesList.get(position).getFullName());
+        courseNameTV.setText(this.mUsersList.get(position).getFullName());
+
         TextView courseCreditsTV = (TextView) elementView.findViewById(R.id.courseCreditsTV);
-        courseCreditsTV.setText(String.valueOf(this.mCoursesList.get(position).getEnrolledCourses()));
+        courseCreditsTV.setText(String.valueOf(this.mUsersList.get(position).getEnrolledCourses().size()) + " Credits");
         return elementView;
     }
 }

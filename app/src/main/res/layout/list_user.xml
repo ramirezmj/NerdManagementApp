@@ -6,11 +6,12 @@
 
     <ImageView
         android:id="@+id/courseIV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:contentDescription="course Image"
         android:minHeight="100dp"
-        android:minWidth="100dp"/>
+        android:minWidth="100dp"
+        android:layout_margin="8dp"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:layout_width="match_parent"
@@ -21,21 +22,22 @@
             android:id="@+id/courseNameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="13dp"
-            />
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/courseCreditsTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginBottom="4dp"
             android:text="Small Text"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textSize="9sp"/>
+            android:textSize="9sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="italic"/>
 
     </LinearLayout>
 </LinearLayout>
