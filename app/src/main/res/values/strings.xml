@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NerdManagementApp</string>
+    <string name="Settings">Settings</string>
+    <string name="pick_options">Change visibility</string>
+    <string name="ok">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -54,7 +54,6 @@ public class UsersAdapter extends BaseAdapter {
             elementView = inflater.inflate(R.layout.list_user, parent, false);
         }
 
-
         ImageView courseIV = (ImageView) elementView.findViewById(R.id.courseIV);
         courseIV.setImageBitmap(this.mUsersList.get(position).getPicture());
 
@@ -62,7 +61,16 @@ public class UsersAdapter extends BaseAdapter {
         courseNameTV.setText(this.mUsersList.get(position).getFullName());
 
         TextView courseCreditsTV = (TextView) elementView.findViewById(R.id.courseCreditsTV);
-        courseCreditsTV.setText(String.valueOf(this.mUsersList.get(position).getEnrolledCourses().size()) + " Credits");
+
+        Integer numberOfCoursesEnrolled = this.mUsersList.get(position).getEnrolledCourses().size();
+
+        if (numberOfCoursesEnrolled == 1) {
+            courseCreditsTV.setText("Signed in " + String.valueOf(numberOfCoursesEnrolled) + " course");
+        } else if (numberOfCoursesEnrolled == 0) {
+            courseCreditsTV.setText("This user is not enrolled in any course");
+        } else {
+            courseCreditsTV.setText("Signed in " + String.valueOf(numberOfCoursesEnrolled) + " courses");
+        }
         return elementView;
     }
 }

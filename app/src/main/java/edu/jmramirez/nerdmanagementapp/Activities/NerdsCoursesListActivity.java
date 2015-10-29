@@ -1,9 +1,16 @@
 package edu.jmramirez.nerdmanagementapp.Activities;
 
+
+import android.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
+import android.support.v7.app.AppCompatDialogFragment;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -15,7 +22,8 @@ public class NerdsCoursesListActivity extends AppCompatActivity {
 
     public final static String TAG = "NerdsCoursesList";
     public final static String INTENT = "POSITION";
-    UserDataMock courses;
+
+    private UserDataMock courses;
 
 
     @Override
@@ -35,7 +43,22 @@ public class NerdsCoursesListActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    public Integer getUserTotalCourses(Integer position) {
-        return 1;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.courses_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            default:
+                AppCompatDialogFragment newFragment = new OptionsDialog();
+                newFragment.show(getSupportFragmentManager(), "test");
+                return true;
+
+        }
     }
 }

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -18,13 +19,14 @@ public class NerdsListActivity extends AppCompatActivity {
 
     public final static String TAG = "NerdsListActivity";
     public final static String INTENT = "POSITION";
+    UserDataMock users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nerds_list);
 
-        UserDataMock users = UserDataMock.newInstance(NerdsListActivity.this);
+        users = UserDataMock.newInstance(NerdsListActivity.this);
 
         List<UserDataMock.UserData> userList = users.getUserList();
         UsersAdapter adapter = new UsersAdapter(this, userList);
@@ -35,11 +37,16 @@ public class NerdsListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d(TAG, String.valueOf(position));
 
-                Intent intent = new Intent(NerdsListActivity.this, NerdsCoursesListActivity.class);
-                intent.putExtra(INTENT, position);
-                startActivity(intent);
+                Integer numberOfCoursesEnrolled = users.getCoursesForUser(position).size();
+
+                if (numberOfCoursesEnrolled > 0) {
+                    Intent intent = new Intent(NerdsListActivity.this, NerdsCoursesListActivity.class);
+                    intent.putExtra(INTENT, position);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(NerdsListActivity.this, "This user is not enrolled in any course", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
