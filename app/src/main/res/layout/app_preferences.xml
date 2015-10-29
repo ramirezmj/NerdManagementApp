@@ -1,0 +1,18 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent"
+     android:layout_width="fill_parent">
+    <PreferenceCategory android:title="Toogle element visibility">
+        <CheckBoxPreference
+            android:key="credits_option"
+            android:title="Credits"
+            android:summary="Number of course credits" />
+        <CheckBoxPreference
+            android:key="days_option"
+            android:title="Class days"
+            android:summary="Days of the week with classes" />
+        <CheckBoxPreference
+            android:key="hour_option"
+            android:title="Hour"
+            android:summary="Start time of the class" />
+    </PreferenceCategory>
+</PreferenceScreen>

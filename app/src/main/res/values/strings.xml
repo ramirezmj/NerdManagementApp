@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NerdManagementApp</string>
+    <string name="app_name">Nerd Management</string>
     <string name="Settings">Settings</string>
     <string name="pick_options">Change visibility</string>
     <string name="ok">Save</string>

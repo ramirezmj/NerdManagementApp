@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".Activities.NerdsCoursesListActivity" >
         </activity>
+        <activity android:name=".Activities.AppSettingsActivity" >
+        </activity>
     </application>
 
 </manifest>
