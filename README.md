@@ -1,2 +1,2 @@
 # NerdManagementApp
-App to check Course data from the users
+Android app to check Course data from the users
